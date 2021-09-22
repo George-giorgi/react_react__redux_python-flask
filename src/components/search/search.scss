@@ -1,0 +1,55 @@
+@import "../../Global.scss";
+
+.wrapp_search_inp{
+    position: absolute;
+    
+    // width: 400px;
+    // height: 400px;
+    background-color: white;
+    top: 30px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:  0px 0px 2px rgba(128,138,157,0.12),0px 0px 24px rgba(128,138,157,0.14);
+    
+    .inp_exit{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+        .search_inpp{
+            display: flex;
+            align-items: center;
+            .searchCon{
+                cursor: pointer;
+            }
+
+            .inp{
+                border-radius: 5px;
+                border: none;
+                padding-left: 5px;
+                height: 20px;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .exit{
+            width: 20px;
+            height: 20px;
+            background: url("../../images/exit.png") no-repeat center;
+            cursor: pointer;
+        }
+    }
+   
+}
+@include mobile{
+   .wrapp_search_inp{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;  
+   }     
+}

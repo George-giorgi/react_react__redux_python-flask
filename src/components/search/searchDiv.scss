@@ -1,0 +1,60 @@
+@import "../../Global.scss";
+
+.wrapp_searchSendvich{
+    display: flex;
+    .search{
+        display: flex;
+        align-items: center;
+        width: 130px;
+        height: 30px;
+        border-radius: 8px;
+        background: rgb(239, 242, 245);
+        padding: 5px;
+        color: rgb(166, 176, 195);
+        cursor: pointer;
+        font-size: 14px;
+        font-family: $font1;
+        letter-spacing: 0.5px;
+        .searchicon{
+            animation: searchIcon 1s forwards;
+            cursor: pointer;
+        }
+        @keyframes searchIcon {
+            from{
+                transform: scale(1.3);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+      
+    }
+    @include mobile{
+        .search{
+            display: none;
+        }
+    }
+    .sendvich_search{
+        display: none;
+    }
+    @include mobile{
+        .sendvich_search{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 80px;
+            height: 60px;
+            
+            .searchIconResponcive{
+                
+                transform: scale(1);
+                cursor: pointer;
+            }
+            .burgerIcon{
+                
+                transform: scale(1);
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import "../../../Global.scss";
+
+.wrapp_sum{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 12px;
+    overflow-x: scroll;
+    
+    @include mobile{
+        font-size: 11px;
+    }
+    p{
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        white-space: nowrap;
+        .about{
+            margin-right: 4px;
+            color: rgb(88, 102, 126);
+            font-weight: 550;
+        }
+        .number{
+            color:blue;
+            cursor: pointer;
+        }
+        .ethGas{
+            height: 16px;
+            color: #58667e;
+        }
+    }
+}
+
+::-webkit-scrollbar{
+    height: 4px;
+    width: 4px;
+   
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: gray;
+    border-radius:2px;
+}

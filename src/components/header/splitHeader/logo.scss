@@ -1,0 +1,65 @@
+@import "../../../Global.scss";
+
+.Logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid rgb(239, 242, 245);
+    font-family: $font1;
+    .wrapp_Logoname_exchange{
+        display: flex;
+        align-items: center;
+        
+        .wrapp_Logoname{
+            position: relative;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .logo_imge{
+                background: url($bg_image_logo) no-repeat center ;
+                background-size: 50px;
+                height: 60px;
+                width: 60px;
+                @include mobile{
+                    height: 35px;
+                    width: 35px;
+                    background-size: 20px;
+                }
+            }
+            .logoName{
+                margin-left: 15px;
+                font-family: $Logo_font;
+                font-size: 20px;
+                @include mobile{
+                    font-size: 13px;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .exchange{
+            margin-left: 20px;
+            cursor: pointer;
+            font-weight: 450;
+            &:hover{
+                color: rgb(12, 12, 189);
+                transition: color 0.3s;
+                transform: scale(0.99);
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+       
+    }
+}
+
+@include mobile{
+    .Logo{
+        border-top: 1px solid rgb(239, 242, 245);
+        border-bottom: none;
+    }
+}
+
+
